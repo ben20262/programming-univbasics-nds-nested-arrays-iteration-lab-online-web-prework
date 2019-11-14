@@ -23,6 +23,7 @@ def find_greater_pair(src)
       num << array[1]
     end
   end
+  num
 end
 
 def total_even_pairs(src)
@@ -33,4 +34,10 @@ def total_even_pairs(src)
   # As a reminder any number % 2 will return 0 or 1. If the result is 0, then
   # the number was even. Review the operator documentation if you've forgotten
   # this!
+  total = 0
+  src.each do |array|
+    if array[0].even?() && array[1].even?()
+      total += array[0] + array[1]
+    end
+  end
 end
